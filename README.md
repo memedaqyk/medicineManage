@@ -1,2 +1,0 @@
-# medicineManage
-medicineManage:webgis

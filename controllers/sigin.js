@@ -4,7 +4,8 @@ const clients = require('../sql/clients');
 var fn_signin = async(ctx,next)=>{
     var user = ctx.request.body.user;
     var pw = ctx.request.body.pw;
-    try{
+
+try{
     var users = await clients.findAll({
         where:{
             usename : user

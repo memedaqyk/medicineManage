@@ -124,6 +124,9 @@ body {
   .btn-navbar {
     display: none;
   }
+  #header-span-two {
+      display: inline-block;
+  }
 }
 /* Navbar Styles */
 .navbar {
@@ -143,6 +146,12 @@ body {
   .navbar .nav-collapse {
     display: none;
   }
+  #header-span {
+      display: inline-block;
+  }
+  #header-span-two {
+      display: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .navbar {
@@ -152,6 +161,9 @@ body {
     margin-bottom: 10px;
     width: 100%;
     padding: 0 10px;
+  }
+  #header-span {
+      display: none;
   }
 }
 /* Mobile First Nav */
@@ -454,4 +466,19 @@ pre code {
 
 .pull-right li:hover {
   color: white  !important;
+}
+#header-span {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bolder;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header-span-two {
+    color: black;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-right: 23px;
 }

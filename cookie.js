@@ -1,4 +1,3 @@
-'use strict';
 
 var cookie = async function (ctx,next) {
     

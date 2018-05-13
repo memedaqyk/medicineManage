@@ -1,5 +1,5 @@
 
-var cookie = async function (ctx,next) {
+let cookie = async function (ctx,next) {
     
     ctx.getClass = function(){
           const str = ctx.cookies.get('class');

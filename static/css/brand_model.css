@@ -182,6 +182,7 @@ embed {
     position: relative;
     z-index: 1;
     margin: 0;
+    border-radius: 15px;
 }
 
 .btn-group button{
@@ -242,7 +243,7 @@ embed {
 }
 
 .brand_col .brand_list {
-    /*width: 230px;*/
+    width: 317px;
     /*height: 600px;*/
     max-height: 500px;
     margin: 0;

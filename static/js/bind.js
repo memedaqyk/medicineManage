@@ -55,7 +55,10 @@ $(function(){
 })
 
 $(function(){
-    $('#shopshow').click(function(){
+    let shopshow = $('#shopshow');
+    let medihide = $('#medihide');
+    let adminhide = $('#adminhide');
+    shopshow.click(function(){
         console.log('shopshow');
        try{ $('#medics').hide()}
        catch(e){};
@@ -63,24 +66,33 @@ $(function(){
        catch(e){}
        try{ $('#firmlist').show()}
        catch(e){}
-    });
-    $('#medihide').click(function(){
+        shopshow.css({"background":"#7AB893", "outline":"none"});
+        medihide.css("background", "white");
+        adminhide.css("background", "white");
+    }).css("background", "#7AB893");
+    medihide.click(function(){
         console.log('medishow');
        try{ $('#firmlist').hide()}
        catch(e){console.log(e)};
        try{ $('.switch').hide()}
        catch(e){}
        try{ $('#medics').show()}
-       catch(e){}
+        catch(e){}
+        shopshow.css("background", "white");
+        medihide.css({"background":"#7AB893", "outline":"none"});
+        adminhide.css("background", "white");
     });
-    $('#adminhide').click(function(){
+    adminhide.click(function(){
        console.log('adminshow')
        try{ $('#medics').hide()}
        catch(e){}
        try{ $('#firmlist').hide()}
        catch(e){console.log(e)}
        try{ $('.switch').show()}
-       catch(e){}
+        catch(e){}
+        shopshow.css("background", "white");
+        medihide.css("background", "white");
+        adminhide.css({"background":"#7AB893", "outline":"none"});
     })
 
 });

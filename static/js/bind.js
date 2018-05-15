@@ -22,8 +22,8 @@ $(function(){
     for(let t of medic){
         $(t).click(function(){
             medicName = $(t).text();
-            $(t).css({  "background": "blue" });
-            try{old.css({  "background": "white" })}
+            $(t).css({  "background": "#7AB893", "color": "white", "text-decoration": "none" });
+            try{old.css({  "background": "white", "color": "black" })}
             catch(e){}
             old = $(t);
         })
@@ -59,7 +59,7 @@ $(function(){
         console.log('shopshow');
        try{ $('#medics').hide()}
        catch(e){};
-       try{ $('#admin').hide()}
+       try{ $('.switch').hide()}
        catch(e){}
        try{ $('#firmlist').show()}
        catch(e){}
@@ -68,7 +68,7 @@ $(function(){
         console.log('medishow');
        try{ $('#firmlist').hide()}
        catch(e){console.log(e)};
-       try{ $('#admin').hide()}
+       try{ $('.switch').hide()}
        catch(e){}
        try{ $('#medics').show()}
        catch(e){}
@@ -79,7 +79,7 @@ $(function(){
        catch(e){}
        try{ $('#firmlist').hide()}
        catch(e){console.log(e)}
-       try{ $('#admin').show()}
+       try{ $('.switch').show()}
        catch(e){}
     })
 

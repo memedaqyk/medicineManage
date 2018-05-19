@@ -58,38 +58,7 @@
                         </ul>
 
                         <div class="tab-content">
-                            <div id="signup">
-                                <form action="/" method="post">
-                                    <div class="top-row">
-                                        <div class="field-wrap" style="margin-bottom:40px;">
-                                            <label>
-        Name<span class="req">*</span>
-      </label>
-                                            <input type="text" required autocomplete="off" />
-                                        </div>
-
-
-                                    </div>
-
-                                    <div class="field-wrap">
-                                        <label>
-      Email Address<span class="req">*</span>
-          </label>
-                                        <input type="email" required autocomplete="off" />
-                                    </div>
-
-                                    <div class="field-wrap">
-                                        <label>
-      Password<span class="req">*</span>
-          </label>
-                                        <input type="password" required autocomplete="off" />
-                                    </div>
-
-                                    <button type="submit" class="button button-block" />注册</button>
-
-                                </form>
-
-                            </div>
+                            
 
                             <div id="login">
                                 <form id="login" action="home" method="post">
@@ -111,6 +80,39 @@
                                     <p class="forgot"><a href="#">忘记密码?</a></p>
 
                                     <button class="button button-block" />登录</button>
+
+                                </form>
+
+                            </div>
+
+                            <div id="signup">
+                                <form action="signup" method="post">
+                                    <div class="top-row">
+                                        <div class="field-wrap" style="margin-bottom:40px;">
+                                            <label>
+        Name<span class="req">*</span>
+      </label>
+                                            <input name="user" type="text" required autocomplete="off" />
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="field-wrap">
+                                        <label>
+      Email Address<span class="req">*</span>
+          </label>
+                                        <input type="email" required autocomplete="off" />
+                                    </div>
+
+                                    <div class="field-wrap">
+                                        <label>
+      Password<span class="req">*</span>
+          </label>
+                                        <input name="pw" type="password" required autocomplete="off" />
+                                    </div>
+
+                                    <button type="submit" class="button button-block" />注册</button>
 
                                 </form>
 

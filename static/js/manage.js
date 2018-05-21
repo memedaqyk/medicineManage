@@ -18,24 +18,30 @@ $(function(){
     $("#map").click(function (e) {
      // alert('X ; '+ e.clientX  + 'Y: '+e.clientY);
       var t = map.getEventCoordinate(e);
-      $('#add_long').val(t[0]);
-      $('#add_lat').val(t[1]);
+      $('#add_long_shop').val(t[0]);
+      $('#add_lat_shop').val(t[1]);
+      $('#add_long_firm').val(t[0]);
+      $('#add_lat_firm').val(t[1]);
     })
-    $('#addSumbit').click(function(){
-        const x = $('#add_long').val();
-        const y = $('#add_lat').val();
-        if(type === 'addshop'){
+    $('#addSumbit1').click(function(){
+        const x = $('#add_long_shop').val();
+        const y = $('#add_lat_shop').val();
+       
             const id = $('#addshop_shopid').val();
             const name = $('#addshop_shopname').val();
-            const fatherid = $('#addshop_firmid').val()
-            alert(fatherid);
+            const fatherid = $('#addshop_firmid').val();
             $.post("addshop", {x,y,id,name,fatherid} );
-        }else if(type === 'addfirm'){
+       
+    })
+    $('#addSumbit2').click(function(){
+        const x = $('#add_long_firm').val();
+        const y = $('#add_lat_firm').val();
+      
             console.log('添加公司');
             const id = $('#addfirm_firmid').val();
             const name = $('#addfirm_firmname').val();
             $.post("addfirm", {x,y,id,name} );
-        }
+       
     })
     
 })

@@ -1,7 +1,7 @@
 'use strict';
 //此模块来处理区域分析
 const FindIdOfpolygon = require('../sql/point');
-const recond = require('../sql/recordsum');
+const recond = require('../sql/record');
 const Sequelize = require('sequelize');
 
 let polygonarr = {};
@@ -28,7 +28,7 @@ let replace =async function(usename){
 }
 let findRecordFre = async function(arr){
     const data = await recond.findAll({
-        attributes : ['id',[Sequelize.fn('COUNT', Sequelize.col('id')), 'number']],
+        attributes : ['id',[Sequelize.fn('COUNT', Sequelize.col('id')), 'number'],'shopname'],
         where : {
             id : {
                 $in : arr

@@ -8,7 +8,7 @@
             <li class="a1">
               <ul>
                 {% for shop in firm.shops %}
-                <a href="#" class="yaodian" style="margin-left:0.3cm">{{shop}}</a>
+                <a href="#" class="yaodian" style="margin-left:10px; font-size: 14px;color: #7d7a7a;"><span style="margin-right: 15px; color:rgb(122, 184, 147);">></span>{{shop}}</a>
                 {% endfor %}
               </ul>
             </li>
@@ -32,9 +32,9 @@
     {% block admin %}
     <div class="switch">
       <div class="switch-header">
-        <input name="radio" type="radio" value="optionone" id="optionone" checked>
+        <input name="radio" type="radio" id="seleAddShop" value="addshop" checked>
         <label for="optionone">添加药店</label>
-        <input name="radio" type="radio" value="optiontwo" id="optiontwo">
+        <input name="radio" type="radio" id="seleAddFirm" value="addfirm">
         <label for="optiontwo" class="right">添加公司</label>
         <span aria-hidden="true"></span>
       </div>
@@ -57,6 +57,15 @@
             </select>
             <label for="exampleInputName1">公司名称</label>
           </span>
+          <span>
+            <input  class="swing"  type="text" id="add_long_shop" placeholder="经度">
+            <label for="exampleInputEmail1">经度</label>              
+          </span>
+          <span>
+            <input  class="swing"  type="text" id="add_lat_shop" placeholder="纬度">
+            <label for="exampleInputEmail2">纬度</label>
+
+          </span>
           <button type="submit" id="addSumbit1">Submit</button>
         </form>
         <!--添加公司 -->
@@ -72,11 +81,11 @@
 
           </span>
           <span>
-            <input  class="swing"  type="text" id="add_long" placeholder="经度">
+            <input  class="swing"  type="text" id="add_long_firm" placeholder="经度">
             <label for="exampleInputEmail1">经度</label>              
           </span>
           <span>
-            <input  class="swing"  type="text" id="add_lat" placeholder="纬度">
+            <input  class="swing"  type="text" id="add_lat_firm" placeholder="纬度">
             <label for="exampleInputEmail2">纬度</label>
 
           </span>
@@ -116,7 +125,7 @@
                   <a href="#" id="tuceng">连接线清除</a>
                 </li>
                 <li>
-                  <a href="#" id="buffer">缓冲区分析</a>
+                    <a href="#" id="buffer" data-toggle="modal" data-target="#modal-buffer">缓冲区分析</a>
                 </li>
                 </li>
               </ul>
@@ -132,6 +141,38 @@
                 <li>
                   <a href="#" class="mouth" value = "11">十一月</a>
                 </li>
+                <li>
+                  <a href="#" class="mouth" value = "10">十月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "9">九月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "8">八月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "7">七月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "6">六月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "5">五月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "4">四月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "3">三月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "2">二月</a>
+                </li>
+                <li>
+                  <a href="#" class="mouth" value = "1">一月</a>
+                </li>
+                
+
               </ul>
             </li>
             <li class="dropdown">
@@ -171,7 +212,4 @@
       </div>
     </div>
   </div>
-     
     {% endblock %}
-
-    

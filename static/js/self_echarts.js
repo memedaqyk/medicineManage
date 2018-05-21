@@ -28,7 +28,7 @@ $(function(){
             let name = [],count = [];
             console.log(data);
             for(let t of data){
-                name[name.length] = t.id;
+                name[name.length] = t.shopname;
                 count[count.length] = t.number;
             }
             myChart.setOption({

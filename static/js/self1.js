@@ -172,7 +172,7 @@ selectInteraction2.on('select',function (e) {
     
         //alert(coordinate);
         const pro = feature.getProperties();
-        content.innerHTML = `<p> 药店名称: ${pro.name} </p> <p>卖方名称 : ${pro.fathername}</p><a href="/record?id=${pro.id}&name=${pro.name}" target="_blank">交易记录</a>`;
+        content.innerHTML = `<p> 药店名称: ${pro.name} </p> <p>卖方名称 : ${pro.fathername}</p><a href="/record?id=${pro.id}&name=${pro.name}" target="_blank" style="background:rgb(122, 184, 147);color: white;font-size: 15px;">交易记录</a>`;
         //alert('选中'+ feature.getProperties().name);
         overlay.setPosition(coordinate);
     }else{

@@ -171,7 +171,7 @@
     transform: rotate(82deg);
 }
 
-#addshop_firmid {
+#addshop_firmid, #buffer-color {
     display: inline-block;
     width: 273px;
     /*padding: 10px 0 10px 15px;*/
@@ -188,7 +188,7 @@
     font-size: 16px;
 }
 
-#addshop_firmid+label {
+#addshop_firmid+label, #buffer-color+label {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -211,7 +211,7 @@
     display: none;
 }
 
-#addSumbit1 {
+#addSumbit1, #addSumbit2, #addSumbit3 {
     width: 300px;
     height: 42px;
     background-color: #7AB893;
@@ -220,11 +220,3 @@
     cursor: pointer;
 }
 
-#addSumbit2 {
-    width: 300px;
-    height: 42px;
-    background-color: #7AB893;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}

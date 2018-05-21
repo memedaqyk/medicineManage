@@ -37,8 +37,6 @@
     <div class="icon-add" id="icon-add"><span class="icon-menu3"></span></div>
 
 
-
-
     <div class="modal" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content" style="border:none;">
@@ -50,15 +48,12 @@
       <span>&times; </span>
     </button>
                         </div>
-
-
                         <ul class="tab-group">
                             <li class="tab active"><a href="#login">登录</a></li>
                             <li class="tab"><a href="#signup">注册</a></li>
                         </ul>
 
                         <div class="tab-content">
-                            
 
                             <div id="login">
                                 <form id="login" action="home" method="post">
@@ -107,8 +102,8 @@
 
                                     <div class="field-wrap">
                                         <label>
-      Password<span class="req">*</span>
-          </label>
+                                            Password<span class="req">*</span>
+                                        </label>
                                         <input name="pw" type="password" required autocomplete="off" />
                                     </div>
 
@@ -123,6 +118,43 @@
 
                     </div>
                     <!-- /form -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 缓冲区 -->
+    <div class="modal" id="modal-buffer">
+        <div class="modal-dialog" style="width: 400px;">
+            <div class="modal-content" style="border:none;">
+                <div class="modal-body" style="padding:0;">
+                    <div class="form switch-body">
+                        <div class="form-cancel">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times; </span>
+                            </button>
+                        </div>
+                        <form id="buffer-form" style="margin:0 atuo;" class="row trans">
+                            <span style="margin-top: 0;">
+                                <input type="text" class="swing" id="buffer-radius" placeholder="radius">
+                                <label style="padding-top: 12px;margin:0;font-size:15px;" for="buffer-radius">半径</label>
+                            </span>
+                            <span>
+                                <select  id="buffer-color">
+                                    <option value="red">red</option>
+                                    <option value="blue">blue</option>
+                                    <option value="yellow">yellow</option>
+                                    <option value="green">green</option>
+                                </select>
+                                <label  style="padding-top: 12px;margin:0;font-size:15px;" for="buffer-color">颜色</label>
+                            </span>
+                            <span>
+                                <input  class="swing"  type="text" id="buffer-opacity" placeholder="透明度(<1)">
+                                <label for="buffer-opacity"  style="padding-top: 12px;font-size:15px; margin:0;">透明度</label>
+                            </span>
+                            <button type="submit" style="border: none;border-radius: 5px;" id="addSumbit3">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,11 +206,6 @@
 
     </div>
     {% endblock %}
-
-
-
-
-
 
 
     <div id="popup" class="ol-popup">

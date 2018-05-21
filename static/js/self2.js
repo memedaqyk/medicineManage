@@ -159,7 +159,7 @@ selectInteraction2.on('select',function (e) {
     
         //alert(coordinate);
         
-        content.innerHTML = '<p> 药店名称：'+ feature.getProperties().name +'</p>'+ '<a href="/form" target="_blank">交易记录</a>';
+        content.innerHTML = '<p> 药店名称：'+ feature.getProperties().name +'</p>'+ '<a href="/form" target="_blank" style="background:rgb(122, 184, 147);color: white;font-size: 15px;">交易记录</a>';
         //alert('选中'+ feature.getProperties().name);
         overlay.setPosition(coordinate);
     }else{

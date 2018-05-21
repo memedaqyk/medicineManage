@@ -13,7 +13,7 @@ let sql = sequelize.define('point',{
     timestamps : false
 })
 */
-/* 导入point代码
+/* 导入point代码 
 const geom = require('./geom').geom;
 const fun = async function () {
     const data = await geom.findAll({
@@ -26,7 +26,12 @@ const fun = async function () {
     })
     for(let t of data){
         const $sql = `insert into point values('${t.id}',ST_PointFromText('POINT(${t.longitude} ${t.latitude})'));`
-        sequelize.query($sql);
+        
+        try{
+            sequelize.query($sql);
+        }catch(e){
+
+        }
     }
     console.log('ok');
 }

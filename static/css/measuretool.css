@@ -44,11 +44,10 @@
 
 .MeasureTool{
   position: absolute;
-  top: 2.0em;
+  top: 20px;
+  left: 20px;
   text-align: left;
   padding: 0;
-  left: 20px;
-  top: 20px;
 }
 .MeasureTool .ulbody{
   display: none;
@@ -76,11 +75,10 @@
 }
 .MeasureTool input[type="button"]{
   background-color: black;
+  font-size: 16px;
   width: 60px;
   height: 26px;
   border: 0;
-  font-size: 16px;
-
 }
 .MeasureTool .ulbody li{
   border-top: 1px solid rgba(221, 221, 221, 0.4);

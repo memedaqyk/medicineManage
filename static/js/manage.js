@@ -62,7 +62,7 @@ $(function () {
 
     })
 
-    // $("#addSubmit5").click(function() {
-    //     location.reload();
-    // });
+    $("#addSubmit5").click(function() {
+        location.reload();
+    });
 })

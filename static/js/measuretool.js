@@ -87,8 +87,10 @@ ol.control.MeasureTool = function (opt_options) {
         typeSelect.value = 'length';
         typeSelect.check = lis[2].getElementsByTagName("input")[0].checked;
         this_.mapmeasure(typeSelect);
-        var ol_control = document.getElementsByClassName("MeasureTool")[0];
-        ol_control.style.display = "none";
+        var ol_control = document.getElementsByClassName("MeasureTool");
+        for (var i = 0; i < ol_control.length; i++) {
+            ol_control[i].style.display = "none";
+        }
 
     };
     //Area start
@@ -96,8 +98,10 @@ ol.control.MeasureTool = function (opt_options) {
         typeSelect.value = 'area';
         typeSelect.check = lis[2].getElementsByTagName("input")[0].checked;
         this_.mapmeasure(typeSelect);
-        var ol_control = document.getElementsByClassName("MeasureTool")[0];
-        ol_control.style.display = "none";
+        var ol_control = document.getElementsByClassName("MeasureTool");
+        for (var i = 0; i < ol_control.length; i++) {
+            ol_control[i].style.display = "none";
+        }
 
     };
 

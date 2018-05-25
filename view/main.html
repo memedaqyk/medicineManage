@@ -41,55 +41,55 @@
       <!-- 添加药店 -->
       <div class="switch-body">
         <form id="addshop" class="row trans">
-          <span>
-            <input type="text" class="swing" id="addshop_shopname" placeholder="name">
-            <label for="exampleInputName1">药店名称</label>
-          </span>
-          <span>
-            <input type="text"  class="swing" id="addshop_shopid" placeholder="编号">
-            <label for="exampleInputName1">药店编号</label>
-          </span>
-          <span>  
-            <select  id="addshop_firmid">
-              {% for firm in firms %}
-              <option value="{{firm.id}}">{{firm.name}}</option>
-              {% endfor %}
-            </select>
-            <label for="exampleInputName1">公司名称</label>
-          </span>
-          <span>
-            <input  class="swing"  type="text" id="add_long_shop" placeholder="经度">
-            <label for="exampleInputEmail1">经度</label>              
-          </span>
-          <span>
-            <input  class="swing"  type="text" id="add_lat_shop" placeholder="纬度">
-            <label for="exampleInputEmail2">纬度</label>
+            <span>
+                <input required type="text" class="swing" id="addshop_shopname" placeholder="name">
+                <label for="exampleInputName1">药店名称</label>
+            </span>
+            <span>
+                <input required type="text"  class="swing" id="addshop_shopid" placeholder="编号">
+                <label for="exampleInputName1">药店编号</label>
+            </span>
+            <span>  
+                <select  id="addshop_firmid">
+                    {% for firm in firms %}
+                    <option value="{{firm.id}}">{{firm.name}}</option>
+                    {% endfor %}
+                </select>
+                <label for="exampleInputName1">公司名称</label>
+            </span>
+            <span>
+                <input required  class="swing"  type="text" id="add_long_shop" placeholder="经度">
+                <label for="exampleInputEmail1">经度</label>              
+            </span>
+            <span>
+                <input  class="swing"  type="text" id="add_lat_shop" placeholder="纬度">
+                <label for="exampleInputEmail2">纬度</label>
 
-          </span>
-          <button type="submit" id="addSumbit1">Submit</button>
+            </span>
+            <button  data-toggle="modal" data-target="#modal-addRecord"  type="submit" id="addSubmit1">Submit</button>
         </form>
         <!--添加公司 -->
         <form id="addfirm" class="form-hidden row trans">
-          <span>
-            <input type="text"  class="swing"  id="addfirm_firmname" placeholder="name">
-            <label for="exampleInputName1">公司名称</label>
+            <span>
+                <input required type="text"  class="swing"  id="addfirm_firmname" placeholder="name">
+                <label for="exampleInputName1">公司名称</label>
 
-          </span>
-          <span>
-            <input  class="swing"  type="text" id="addfirm_firmid" placeholder="编号">
-            <label for="exampleInputPassName1">公司编号</label>
+            </span>
+            <span>
+                <input required  class="swing"  type="text" id="addfirm_firmid" placeholder="编号">
+                <label for="exampleInputPassName1">公司编号</label>
 
-          </span>
-          <span>
-            <input  class="swing"  type="text" id="add_long_firm" placeholder="经度">
-            <label for="exampleInputEmail1">经度</label>              
-          </span>
-          <span>
-            <input  class="swing"  type="text" id="add_lat_firm" placeholder="纬度">
+            </span>
+            <span>
+                <input  required class="swing"  type="text" id="add_long_firm" placeholder="经度">
+                <label for="exampleInputEmail1">经度</label>              
+            </span>
+            <span>
+                <input required  class="swing"  type="text" id="add_lat_firm" placeholder="纬度">
             <label for="exampleInputEmail2">纬度</label>
 
           </span>
-          <button type="submit" id="addSumbit2">Submit</button>
+          <button  data-toggle="modal" data-target="#modal-addRecord"  type="submit" id="addSubmit2">Submit</button>
         </form>
       </div>
     </div>
@@ -138,58 +138,18 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#">销量统计
+              <a href="#">销售情况
                 <b class="caret"></b>
               </a>
               <ul class="subnav">
+                  <li>
+                      <a href="#" id="sub-sales"  data-toggle="modal" data-target="#modal-sales" >药品销量统计</a>
+                  </li>
                 <li>
-                  <a href="#" class="mouth" value = "12">十二月</a>
+                  <a href="#" id="numberchange">药品数量变化</a>
                 </li>
                 <li>
-                  <a href="#" class="mouth" value = "11">十一月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "10">十月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "9">九月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "8">八月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "7">七月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "6">六月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "5">五月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "4">四月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "3">三月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "2">二月</a>
-                </li>
-                <li>
-                  <a href="#" class="mouth" value = "1">一月</a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#">销量变化
-                <b class="caret"></b>
-              </a>
-              <ul class="subnav">
-                <li>
-                  <a href="#" id="numberchange">数量变化</a>
-                </li>
-                <li>
-                  <a href="#" id="moneychange">金额变化</a>
+                  <a href="#" id="moneychange">药品金额变化</a>
                 </li>
               </ul>
             </li>
@@ -207,7 +167,7 @@
               </ul>
             </li>
             <li class="dropdown">
-                <a href="#">流行性疾病分析
+                <a href="#">疾病分析
                     <b class="caret"></b>
                 </a>
                 <ul class="subnav">

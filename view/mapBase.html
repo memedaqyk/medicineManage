@@ -132,9 +132,7 @@
                                 <span  style="color: #00B189; font-size: 20px;">&times; </span>
                             </button>
                             <iframe  width=1000 height=550 style="margin:0 auto;" dallowfullscreen src="https://geohey.com/apps/dataviz/401397c0d705494fb96fc6f9b6b0427e/share?ak=NWZiMjhhNDEyYzY0NDhiMDkwNzlhZmYwYzExNzY5ZTI" frameborder=0></iframe>
-                            <button class="button" style="border-radius:5px; position: absolute; top: 50px; right: 50px;">
-                                <a target="_blank" href="https://geohey.com/apps/dataviz/401397c0d705494fb96fc6f9b6b0427e/preview" >&nbsp到新页&nbsp</a>
-                            </button>
+                            <a class="to-other-page" target="_blank" href="https://geohey.com/apps/dataviz/401397c0d705494fb96fc6f9b6b0427e/preview" >&nbsp到新页&nbsp</a>
         </div>
     </div>
     
@@ -145,11 +143,34 @@
                 <span style="color: #00B189; font-size: 20px;">&times; </span>
             </button>
             <iframe width=1000 height=550 style="margin:0 auto;" allowfullscreen src="https://geohey.com/apps/dataviz/c57ea209f12d4d72add990f005bbbaa1/share?ak=NWZiMjhhNDEyYzY0NDhiMDkwNzlhZmYwYzExNzY5ZTI" frameborder=0></iframe>
-            <button class="button" style="border-radius:5px; position: absolute; top: 50px; right: 50px;">
-                <a target="_blank" href="https://geohey.com/apps/dataviz/c57ea209f12d4d72add990f005bbbaa1/share?ak=NWZiMjhhNDEyYzY0NDhiMDkwNzlhZmYwYzExNzY5ZTI" >&nbsp到新页&nbsp</a>
-            </button>
+                <a class="to-other-page" target="_blank" href="https://geohey.com/apps/dataviz/c57ea209f12d4d72add990f005bbbaa1/share?ak=NWZiMjhhNDEyYzY0NDhiMDkwNzlhZmYwYzExNzY5ZTI" >&nbsp到新页&nbsp</a>
         </div>
     </div>
+   
+    <!-- 添加药店 -->
+    <div class="modal" id="modal-addRecord">
+        <div class="modal-dialog" style="width: 400px;">
+            <div class="modal-content" style="border:none;">
+                <div class="modal-body" style="padding:0;">
+                    <div class="form switch-body">
+                        <div class="form-cancel">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times; </span>
+                            </button>
+                        </div>
+                        <form style="margin:0 atuo;" class="row trans">
+                            <div>
+                                <p style="color: #7AB893;font-size: 19px">添加成功，页面将自动刷新</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
 
     <!-- 词云-->
     <div class="modal" id="modal-wordCloud">
@@ -159,6 +180,44 @@
             </button>
             <div>
                 <img alt="" src="/static/img/wordCloud.png"/>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 缓冲区 -->
+    <div class="modal" id="modal-sales">
+        <div class="modal-dialog" style="width: 400px;">
+            <div class="modal-content" style="border:none;">
+                <div class="modal-body" style="padding:0;">
+                    <div class="form switch-body">
+                        <div class="form-cancel">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times; </span>
+                            </button>
+                        </div>
+                        <form style="margin:0 atuo;" class="row trans">
+                          <span style="margin-top: 0;">
+                                <select id="mouth-sales">
+                                    <option class="mouth" value="1">一月</option>
+                                    <option class="mouth" value="2">二月</option>
+                                    <option class="mouth" value="3">三月</option>
+                                    <option class="mouth" value="4">四月</option>
+                                    <option class="mouth" value="5">五月</option>
+                                    <option class="mouth" value="6">六月</option>
+                                    <option class="mouth" value="7">七月</option>
+                                    <option class="mouth" value="8">八月</option>
+                                    <option class="mouth" value="9">九月</option>
+                                    <option class="mouth" value="10">十月</option>
+                                    <option class="mouth" value="11">十一月</option>
+                                    <option class="mouth" value="12">十二月</option>
+                                </select>
+                                <label  style="padding-top: 12px;margin:0;font-size:15px;"  for="buffer-color">月份</label>
+                            </span>
+                            <button  data-dismiss="modal" type="submit" style="border: none;border-radius: 5px;" id="addSubmit4">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -191,7 +250,7 @@
                                 <input  class="swing"  type="text" id="buffer-opacity" placeholder="opacity(<1)">
                                 <label for="buffer-opacity"  style="padding-top: 12px;font-size:15px; margin:0;">透明度</label>
                             </span>
-                            <button type="submit" style="border: none;border-radius: 5px;" id="addSumbit3">Submit</button>
+                            <button  data-dismiss="modal" type="submit" style="border: none;border-radius: 5px;" id="addSubmit3">Submit</button>
                         </form>
                     </div>
                 </div>

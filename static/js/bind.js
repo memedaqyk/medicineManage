@@ -1,17 +1,5 @@
 'use strict';
 
-//分时统计绑定
-$(function(){
-    const $mouth = $('.mouth');
-    for(let i = 0; i<$mouth.length; i+=1){
-        let t = $($mouth[i]);
-        t.click(function(){
-            //console.log(t.attr('value'));
-            const url = `/month?id=${t.attr('value')}`
-            subWin(url)
-        })
-    }
-})
 
 
 
@@ -110,11 +98,30 @@ $('#buffer').click(function(){
     }
 }())
 
-$('#addSumbit3').click(function(){
+$('#addSubmit3').click(function(){
     const r = $("#buffer-radius").val();
     const color = $("#buffer-color").val();
     const opacity = $("#buffer-opacity").val();
     shoplayerbuff = getBufferLayer(color,r,opacity);
     map.addLayer(shoplayerbuff);
-    return false;
+    // return false;
 })
+
+$('#addSubmit4').click(function(){
+    const sales = $("#mouth-sales").val();
+    const url = `/month?id=${sales}`
+    subWin(url)
+})
+
+//分时统计绑定
+// $(function(){
+//     const $mouth = $('.mouth');
+//     for(let i = 0; i<$mouth.length; i+=1){
+//         let t = $($mouth[i]);
+//         t.click(function(){
+//             //console.log(t.attr('value'));
+//             const url = `/month?id=${t.attr('value')}`
+//             subWin(url)
+//         })
+//     }
+// })

@@ -171,7 +171,7 @@
     transform: rotate(82deg);
 }
 
-#addshop_firmid, #buffer-color {
+#addshop_firmid, #buffer-color, #mouth-sales {
     display: inline-block;
     width: 273px;
     /*padding: 10px 0 10px 15px;*/
@@ -188,7 +188,7 @@
     font-size: 16px;
 }
 
-#addshop_firmid+label, #buffer-color+label {
+#addshop_firmid+label, #buffer-color+label, #mouth-sales+label {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -211,7 +211,7 @@
     display: none;
 }
 
-#addSumbit1, #addSumbit2, #addSumbit3 {
+#addSubmit1, #addSubmit2, #addSubmit3, #addSubmit4, #addSubmit5 {
     width: 300px;
     height: 42px;
     background-color: #7AB893;
@@ -220,3 +220,17 @@
     cursor: pointer;
 }
 
+.to-other-page {
+    border-radius:5px;
+    display:block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
+    background: rgb(122, 184, 147);
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+}

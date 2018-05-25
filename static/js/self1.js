@@ -29,13 +29,19 @@ var view1 = new ol.View({
     projection : 'EPSG:4326'
 })
 // 创建地图
+var baseMapOSM = new ol.layer.Tile({source: new ol.source.OSM()});
+var baseMapStamen = new ol.layer.Tile({
+        source: new ol.source.Stamen({
+            layer: 'watercolor'
+        })
+    });
 var map = new ol.Map({
     // 设置地图图层
 
     layers: [
         // 创建一个使用Open Street Map地图源的瓦片图层
-
-        new ol.layer.Tile({source: new ol.source.OSM()})
+        baseMapOSM
+        
     ],
     overlays: [overlay],
     // 设置显示地图的视图
@@ -43,7 +49,24 @@ var map = new ol.Map({
     // 让id为map的div作为地图的容器
     target: document.getElementById('map')
 });
-
+//底图转换
+$("#change-basemap").click(function(){
+    let boo = true;
+    return function(){
+        if(boo){
+            map.removeLayer(baseMapOSM);
+            map.addLayer(baseMapStamen);
+            baseMapStamen.setZIndex(-1);
+            //alert(10);
+        }else{
+            map.removeLayer(baseMapStamen);
+            map.addLayer(baseMapOSM);
+            baseMapOSM.setZIndex(-1);
+          
+        }
+        boo = !boo;
+    }
+}())
 
 const getsize = function(){
     var data = map.getView().getZoom()/2;
@@ -107,20 +130,24 @@ function reBuffer(name){
 }
 //缓冲区图层
 */
-let shoplayerbuff = new ol.layer.Vector({
-    source:vectorSoure,
-    style : new ol.style.Style({
-        image : new ol.style.Circle({
-            radius: 30,
-            fill: new ol.style.Fill({
-                color:'rgba(255,255,255,0.4)'
-            }),
-            stroke: new ol.style.Stroke({color: 'red', width: 1})
+let getBufferLayer = function(color,r,opacity) {//边界颜色，半径，透明度
+    const str = `rgba(255,255,255,${opacity})`;
+    let shoplayerbuff = new ol.layer.Vector({
+        source:vectorSoure,
+        style : new ol.style.Style({
+            image : new ol.style.Circle({
+                radius: r,
+                fill: new ol.style.Fill({
+                    color:str
+                }),
+                stroke: new ol.style.Stroke({color: color, width: 1})
+            })
         })
+
+
     })
-
-
-})
+    return shoplayerbuff;
+}
 
 
 

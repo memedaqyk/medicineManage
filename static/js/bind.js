@@ -96,12 +96,12 @@ $(function(){
     })
 
 });
-
+let shoplayerbuff;
 $('#buffer').click(function(){
     let status = true;
     return function(){
         if(status){
-            map.addLayer(shoplayerbuff);
+            
             status = false;
         }else{
             map.removeLayer(shoplayerbuff);
@@ -109,3 +109,12 @@ $('#buffer').click(function(){
         }
     }
 }())
+
+$('#addSumbit3').click(function(){
+    const r = $("#buffer-radius").val();
+    const color = $("#buffer-color").val();
+    const opacity = $("#buffer-opacity").val();
+    shoplayerbuff = getBufferLayer(color,r,opacity);
+    map.addLayer(shoplayerbuff);
+    return false;
+})
